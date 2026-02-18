@@ -17,8 +17,21 @@
         $porcentaje+=strlen($nombre2);
 
         if(str_contains($nombre1,"a")){
-            
+            $porcentaje+=15;
         }
+        if(str_contains($nombre2,"a")){
+            $porcentaje+=15;
+        }
+
+        $porcentaje+=random_int(0,30);
+
+        $alias=substr($nombre1,0,2).substr($nombre2,0,2);
+
+        echo "Nombre persona 1: ".$nombre1."<br>";
+        echo "Nombre persona 2: ".$nombre2."<br>";
+        echo "Alias de pareja: ".$alias."<br>";
+        echo "Porcentaje de compatibilidad: ".$porcentaje."<br>";
     ?>
 </body>
+
 </html>
